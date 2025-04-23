@@ -1,0 +1,22 @@
+//Requerimiento: Usted como responsable del análisis de datos semiestructurados en mongoDB para un proyecto de TI debe tomar en cuenta la distribución de la información de dicha boleta para luego crear un reporte donde considere:
+
+//•	Visualizar al menos 5 campos.
+//•	Dos filtros.
+//•	Un ordenamiento.
+
+db.factura
+  .find(
+    {
+      cantidad: { $gte: 2 },
+      precioUnitario: { $lt: 20 },
+    },
+    {
+      cliente: 1,
+      fecha: 1,
+      descripcion: 1,
+      precioUnitario: 1,
+      importe: 1,
+      totalFactura: 1,
+    }
+  )
+  .sort({ precioUnitario: 1 });
