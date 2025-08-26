@@ -71,8 +71,6 @@ db.branch.insertMany([
 // Cantidad de documentos insertados
 db.branch.find().count();
 
-/////////////////
-
 // Eliminar todos los documentos de colección clients
 db.clients.drop();
 

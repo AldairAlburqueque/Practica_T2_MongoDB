@@ -1,6 +1,6 @@
 use("UrbanStyle_store_T2");
 
-//Utilizando la colección vendedores mostrar nombres, ventas mensuales y sede en la que labora, la lista debe mostrar después del tercer documento, filtre por sede que sea la “Sucursal Sur”. Ordene por cualquier campo.
+//Utilizando la colección vendedores mostrar nombres, ventas mensuales y sede en la que labora, la lista debe mostrar después del segundo documento, filtre por sede que sea la “Sucursal Sur”. Ordene por cualquier campo.
 
 db.sellers
   .find(
@@ -13,7 +13,7 @@ db.sellers
     }
   )
   .sort({ "metas.ventasMensuales": 1 })
-  .skip(3);
+  .skip(2);
 
 //Listar sólo los nombres, apellidos y fecha de ingreso (sin “_id”), ordenada en descendente por apellidos, recuperar los 4 primeros documentos. Filtre sólo los vendedores cuya cantidad de clientes nuevos que atienden sean menores e iguales que 20.
 
