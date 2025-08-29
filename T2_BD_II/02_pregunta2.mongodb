@@ -2,23 +2,18 @@ use("UrbanStyle_store_T2");
 
 //Listar de los productos _id, nombre, marca, talla y precio de las prendas, filtre cuya sucursal sea “Sucursal Norte” y el precio sea mayor igual a 100.
 
-// db.products.find(
-//   {
-//     $and: [
-//       {
-//         sucursal: "Sucursal Norte",
-//         precio: { $gte: 100 },
-//       },
-//     ],
-//   },
-//   {
-//     _id: 1,
-//     nombre: 1,
-//     marca: 1,
-//     talla: 1,
-//     precio: 1,
-//   }
-// );
+db.products.find(
+  {
+    $and: [{ sucursal: "Sucursal Norte", precio: { $gte: 100 } }],
+  },
+  {
+    _id: 1,
+    nombre: 1,
+    marca: 1,
+    talla: 1,
+    precio: 1,
+  }
+);
 
 //Mostrar los productos cuyo precio sea mayor a 55 o color “azul”, no considerar de la temporada “Invierno”
 
